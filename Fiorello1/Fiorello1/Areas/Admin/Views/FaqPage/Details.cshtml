@@ -1,0 +1,47 @@
+﻿@using Fiorello1.Areas.Admin.ViewModels.FaqPage
+@model FaqPageDetailsViewModel
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+
+                        <p class="card-description">
+                            Details FaqPage
+                        </p>
+
+                        <span>Id:</span>
+                        <span>@Model.Id</span>
+
+                        <br />
+                        <br />
+
+                        <span>Order:</span>
+                        <span>@Model.Order</span>
+
+                        <br />
+                        <br />
+                        <span>TITLE:</span>
+                        <span>@Model.Title</span>
+
+                        <br />
+                        <br />
+                        <span>Description:</span>
+                        <span>@Model.Description</span>
+
+                        <br />
+                        <br />
+
+
+
+                    </div>
+                    <button>
+                        <a class="btn btn-light" asp-action="index" asp-controller="faqpage" asp-area="admin">Cancel</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

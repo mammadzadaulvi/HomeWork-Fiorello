@@ -1,5 +1,6 @@
-﻿@using Fiorello1.ViewModel.Category
-@model CategoryIndexViewModel
+﻿@using Fiorello1.ViewModels.Product
+@model ProductDetailsViewModel
+
 
 <a id='mkdf-back-to-top' href='#'>
     <span class="mkdf-icon-stack">
@@ -26,26 +27,37 @@
                         <div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images" data-columns="4" style="opacity: 1; transition: opacity 0.25s ease-in-out 0s;">
                             <figure class="woocommerce-product-gallery__wrapper">
                                 <div data-thumb="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-img-100x100.jpg" data-thumb-alt="c" class="woocommerce-product-gallery__image">
-                                    <a href="assets/vendor/wp-content/uploads/2018/05/shop-2-img.jpg" data-rel="prettyPhoto[woo_single_pretty_photo]"><img width="620" height="800" src="assets/vendor/wp-content/uploads/2018/05/shop-2-img.jpg" class="wp-post-image" alt="c" title="shop-2-img" data-caption="" data-src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-img.jpg" data-large_image="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-img.jpg" data-large_image_width="620" data-large_image_height="800" srcset="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-img.jpg 620w, https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-img-233x300.jpg 233w" sizes="(max-width: 620px) 100vw, 620px" loading="eager"></a>
+                                    <a href="~/assets/img/@Model.MainPhoto" data-rel="prettyPhoto[woo_single_pretty_photo]">
+                                        <img width="620" height="800" src="~/assets/img/@Model.MainPhoto" class="wp-post-image" alt="c" title="shop-2-img" data-caption="" data-src="~/assets/img/@Model.MainPhoto" data-large_image="~/assets/img/@Model.MainPhoto" data-large_image_width="620" data-large_image_height="800" srcset="~/assets/img/@Model.MainPhoto" sizes="(max-width: 620px) 100vw, 620px" loading="eager">
+                                    </a>
                                 </div>
-                                <div data-thumb="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-4-300x400.jpg" class="woocommerce-product-gallery__image"><a href="assets/vendor/wp-content/uploads/2018/05/shop-2-gallery-4.jpg" data-rel="prettyPhoto[woo_single_pretty_photo]"><img width="300" height="400" src="~/assets/vendor/wp-content/uploads/2018/05/shop-2-gallery-4-300x400.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="c" title="shop-2-gallery-4" data-caption="" data-src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-4.jpg" data-large_image="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-4.jpg" data-large_image_width="465" data-large_image_height="600" loading="eager"></a></div>
+
+                                @foreach (var photo in Model.AddPhotos)
+                                {
+                                    <div data-thumb="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-4-300x400.jpg" class="woocommerce-product-gallery__image">
+                                        <a href="~/assets/img/@photo.Name" data-rel="prettyPhoto[woo_single_pretty_photo]">
+                                            <img width="300" height="400" src="~/assets/img/@photo.Name" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="c" title="shop-2-gallery-4" data-caption="" data-src="~/assets/img/@photo.Name" data-large_image="~/assets/img/@photo.Name" data-large_image_width="465" data-large_image_height="600" loading="eager">
+                                        </a>
+                                    </div>
+                                }
+
+                               @* <div data-thumb="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-4-300x400.jpg" class="woocommerce-product-gallery__image"><a href="assets/vendor/wp-content/uploads/2018/05/shop-2-gallery-4.jpg" data-rel="prettyPhoto[woo_single_pretty_photo]"><img width="300" height="400" src="~/assets/vendor/wp-content/uploads/2018/05/shop-2-gallery-4-300x400.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="c" title="shop-2-gallery-4" data-caption="" data-src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-4.jpg" data-large_image="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-4.jpg" data-large_image_width="465" data-large_image_height="600" loading="eager"></a></div>
                                 <div data-thumb="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-3-300x400.jpg" class="woocommerce-product-gallery__image"><a href="assets/vendor/wp-content/uploads/2018/05/shop-2-gallery-3.jpg" data-rel="prettyPhoto[woo_single_pretty_photo]"><img width="300" height="400" src="~/assets/vendor/wp-content/uploads/2018/05/shop-2-gallery-3-300x400.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="c" title="shop-2-gallery-3" data-caption="" data-src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-3.jpg" data-large_image="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-3.jpg" data-large_image_width="465" data-large_image_height="600" loading="eager"></a></div>
                                 <div data-thumb="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-2-300x400.jpg" class="woocommerce-product-gallery__image"><a href="assets/vendor/wp-content/uploads/2018/05/shop-2-gallery-2.jpg" data-rel="prettyPhoto[woo_single_pretty_photo]"><img width="300" height="400" src="~/assets/vendor/wp-content/uploads/2018/05/shop-2-gallery-2-300x400.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="c" title="shop-2-gallery-2" data-caption="" data-src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-2.jpg" data-large_image="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-2.jpg" data-large_image_width="465" data-large_image_height="600" loading="eager"></a></div>
-                                <div data-thumb="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-1-300x400.jpg" class="woocommerce-product-gallery__image"><a href="assets/vendor/wp-content/uploads/2018/05/shop-2-gallery-1.jpg" data-rel="prettyPhoto[woo_single_pretty_photo]"><img width="300" height="400" src="~/assets/vendor/wp-content/uploads/2018/05/shop-2-gallery-1-300x400.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="c" title="shop-2-gallery-1" data-caption="" data-src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-1.jpg" data-large_image="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-1.jpg" data-large_image_width="465" data-large_image_height="600" loading="eager"></a></div>
+                                <div data-thumb="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-1-300x400.jpg" class="woocommerce-product-gallery__image"><a href="assets/vendor/wp-content/uploads/2018/05/shop-2-gallery-1.jpg" data-rel="prettyPhoto[woo_single_pretty_photo]"><img width="300" height="400" src="~/assets/vendor/wp-content/uploads/2018/05/shop-2-gallery-1-300x400.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="c" title="shop-2-gallery-1" data-caption="" data-src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-1.jpg" data-large_image="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-1.jpg" data-large_image_width="465" data-large_image_height="600" loading="eager"></a></div>*@
                             </figure>
                         </div>
                         <div class="mkdf-single-product-summary">
                             <div class="summary entry-summary">
-                                <h2 itemprop="name" class="mkdf-single-product-title">Orange Amaryllis</h2>
+                                <h2 itemprop="name" class="mkdf-single-product-title">@Model.Title</h2>
                                 <p class="price">
-                                    <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>259</bdi></span>
+                                    <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>@Model.Price</bdi></span>
                                 </p>
+
+
                                 <div class="woocommerce-product-details__short-description">
                                     <p>
-                                        Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-                                        per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu
-                                        felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed
-                                        ut imperdiet nisi. Proin condimentum fermentum nunc.
+                                        @Html.Raw(Model.Description)
                                     </p>
                                 </div>
                                 <form class="cart" action="https://fiorello.qodeinteractive.com/product/orange-amaryllis/" method="post" enctype="multipart/form-data">
@@ -53,7 +65,7 @@
                                         <label class="screen-reader-text" for="quantity_635cd8fc53619">Orange Amaryllis quantity</label>
                                         <span class="mkdf-quantity-label" for="quantity_635cd8fc53619">Quantity</span>
                                         <span class="mkdf-quantity-minus arrow_triangle-left"></span>
-                                        <input type="text" id="quantity_635cd8fc53619" class="input-text qty text mkdf-quantity-input" data-step="1" data-min="1" data-max="" name="quantity" value="1" title="Qty" size="4" placeholder="" inputmode="numeric">
+                                        <input type="text" id="quantity_635cd8fc53619" class="input-text qty text mkdf-quantity-input" data-step="1" data-min="1" data-max="" name="quantity" value="@Model.Quantity" title="Qty" size="4" placeholder="" inputmode="numeric">
                                         <span class="mkdf-quantity-plus arrow_triangle-right"></span>
                                     </div>
                                     <button type="submit" name="add-to-cart" value="251" class="single_add_to_cart_button button alt">Add to cart</button>
@@ -61,12 +73,13 @@
 
                                 <div class="product_meta">
                                     <span class="posted_in">
-                                        Category: <a href="../../product-category/exotic/index.html" rel="tag">Exotic</a>
+                                        Category: <a href="../../product-category/exotic/index.html" rel="tag">@Model.Category.Title</a>
                                     </span>
                                 </div>
-
                             </div>
                         </div>
+
+
                     </div>
                     <div class="woocommerce-tabs wc-tabs-wrapper">
                         <ul class="tabs wc-tabs" role="tablist">
@@ -94,16 +107,7 @@
                                                             The power of flowers
                                                         </h3>
                                                         <p class="mkdf-st-text">
-                                                            Aliquam lorem ante, dapibus in, viverra quis,
-                                                            feugiat a, tellus. Phasellus viverra nulla ut
-                                                            metus varius laoreet. Quisque rutrum. Aenean
-                                                            imperdiet. Etiam ultricies nisi vel augue.
-                                                            Curabitur ullamcorper ultricies nisi. Nam eget
-                                                            dui. Etiam rhoncus. Maecenas tempus, tellus eget
-                                                            condimentum rhoncus, sem quam semper libero, sit
-                                                            amet adipiscing sem neque sed ipsum. Nam quam
-                                                            nunc, blandit vel, luctus pulvinar, hendrerit
-                                                            id, lorem. Maecenas nec odio et ante
+                                                            @Html.Raw(Model.Description)
                                                         </p>
                                                     </div>
                                                 </div>
@@ -124,8 +128,7 @@
                                     <tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--dimensions">
                                         <th class="woocommerce-product-attributes-item__label">Dimensions</th>
                                         <td class="woocommerce-product-attributes-item__value">
-                                            30 × 30
-                                            × 50 cm
+                                            @Model.Weight
                                         </td>
                                     </tr>
                                 </tbody>
@@ -142,3 +145,7 @@
         </div>
     </div>
 </div>
+
+@section Scripts{
+    <script type="text/javascript" src="~/assets/js/product-details.js"></script>
+}

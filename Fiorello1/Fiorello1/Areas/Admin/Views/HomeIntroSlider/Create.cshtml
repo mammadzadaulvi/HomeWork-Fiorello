@@ -1,0 +1,71 @@
+﻿@using Fiorello1.Areas.Admin.ViewModels.HomeIntroSlider
+@using Fiorello1.Models
+@model HomeIntroSliderCreateViewModel
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+
+                        <p class="card-description">
+                            Home Main Slider
+                        </p>
+
+                        <form enctype="multipart/form-data" method="post" asp-action="create" asp-controller="homeintroslider" asp-area="admin" class="forms-sample">
+                            <div class="form-group">
+                                <label asp-for="Title">Title</label>
+                                <input class="form-control" asp-for="Title">
+                                <span asp-validation-for="Title"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Description">Description</label>
+                                <textarea class="form-control" asp-for="Description"></textarea>
+                                <span asp-validation-for="Description"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="AddPhoto">AddPhoto</label>
+                                <input class="form-control" asp-for="AddPhoto">
+                                <span asp-validation-for="AddPhoto"></span>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label asp-for="Photos">Photos</label>
+                                <input class="form-control" asp-for="Photos">
+                                @{
+                                    if (Html.ViewData.ModelState["Photos"] != null)
+                                    {
+                                        foreach (var error in Html.ViewData.ModelState["Photos"].Errors)
+                                        {
+                                            <li>@error.ErrorMessage</li>
+                                        }
+                                    }
+
+                                }
+                            </div>
+                            <button type="submit" class="btn btn-primary me-2">Submit</button>
+                            <a class="btn btn-danger" asp-action="index" asp-controller="homeintroslider" asp-area="admin"> Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.2.1/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#Description'))
+            .then(editor => {
+                console.log(editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+}

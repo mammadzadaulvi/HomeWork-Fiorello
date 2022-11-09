@@ -11,7 +11,7 @@ namespace Fiorello1.Areas.Admin.ViewModels.Product
         public int Quantity { get; set; }
         public int CategoryId { get; set; }
 
-        public List<SelectListItem>? Category { get; set; }
+        public List<SelectListItem>? Categories { get; set; }
         public string Description { get; set; }
         public string Weight { get; set; }
         public string Dimension { get; set; }

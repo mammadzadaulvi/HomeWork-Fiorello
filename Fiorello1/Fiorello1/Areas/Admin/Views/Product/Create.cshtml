@@ -37,7 +37,7 @@
                                 <textarea class="form-control" asp-for="Description"></textarea>
                                 <span asp-validation-for="Description"></span>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label asp-for="Weight">Weight</label>
                                 <input class="form-control" asp-for="Weight">
@@ -52,7 +52,7 @@
 
                             <div class="form-group">
                                 <label asp-for="CategoryId">Category</label>
-                                <select class="form-select" asp-for="CategoryId" asp-items="Model.Category"></select>
+                                <select class="form-select" asp-for="CategoryId" asp-items="Model.Categories"></select>
                                 <span asp-validation-for="CategoryId"></span>
                             </div>
 

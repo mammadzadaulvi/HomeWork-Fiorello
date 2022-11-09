@@ -1,0 +1,51 @@
+﻿@using Fiorello1.ViewModels.Product
+@model ProductLoadMoreViewModel
+
+@foreach (var prod in Model.Products)
+{
+    <div class="mkdf-pli-inner">
+        <div class="mkdf-pli-image">
+            <span class="mkdf-pli-new-product">@prod.Status</span>
+            <img width="620" height="800"
+             src="~/assets/img/@prod.MainPhotoName"
+             class="attachment-woocommerce_single size-woocommerce_single wp-post-image"
+             alt="h"
+             sizes="(max-width: 620px) 100vw, 620px"
+             loading="eager" />
+        </div>
+        <a asp-action="details" asp-controller="product" asp-route-id="@prod.Id" class="mkdf-pli-link" itemprop="url"
+       title="Schefflera"></a>
+    </div>
+    <div class="mkdf-pli-text-wrapper">
+        <h6 itemprop="name" class="entry-title mkdf-pli-title">
+            <a itemprop="url">@prod.Title</a>
+        </h6>
+        <div class="mkdf-pli-add-to-cart mkdf-default-skin">
+            <a rel="nofollow" href="indexcb0b.html?add-to-cart=246"
+           data-quantity="1" data-product_id="246"
+           data-product_sku="563654"
+           class="button add_to_cart_button ajax_add_to_cart mkdf-button">
+                Add
+                to cart
+            </a>
+        </div>
+        <div class="mkdf-pli-price">
+            <span class="woocommerce-Price-amount amount">
+                <span class="woocommerce-Price-currencySymbol">&#036;</span>@prod.Price
+            </span>
+        </div>
+    </div>
+}
+
+
+@if (Model.Islast)
+{
+    <script type="text/javascript">
+        jQuery(document).ready((function($) {
+            function myFunc() {
+                $("#loadMore").remove();
+            }
+            myFunc();
+        }))
+    </script>
+}

@@ -1,0 +1,40 @@
+﻿@using Fiorello1.Areas.Admin.ViewModels.FaqPage
+@model FaqPageUpdateViewModel
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+
+                        <p class="card-description">
+                            Update FaqPage
+                        </p>
+                        <form method="post" asp-action="update" asp-controller="faqpage" asp-area="admin" class="forms-sample">
+                            <div class="form-group">
+                                <label asp-for="Order">Order</label>
+                                <input class="form-control" asp-for="Order">
+                                <span asp-validation-for="Order"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Title">Title</label>
+                                <input class="form-control" asp-for="Title">
+                                <span asp-validation-for="Title"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Description">Description</label>
+                                <textarea class="form-control" asp-for="Description"></textarea>
+                                <span asp-validation-for="Description"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary me-2">Submit</button>
+                            <button class="btn btn-light">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

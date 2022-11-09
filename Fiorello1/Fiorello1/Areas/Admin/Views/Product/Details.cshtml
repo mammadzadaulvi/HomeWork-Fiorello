@@ -40,7 +40,7 @@
                             <td>@Html.Raw(Model.Description)</td>
                             <td>@Model.Weight</td>
                             <td>@Model.Dimension</td>
-                            <td><select disabled class="form-select" asp-for="CategoryId" asp-items="@Model.Category"></select> </td>
+                            <td><select disabled class="form-select" asp-for="CategoryId" asp-items="@Model.Categories"></select> </td>
                             <td>@Model.Status</td>
                             <td><img src="~/assets/img/@Model.MainPhoto"/></td>
                         </tr>

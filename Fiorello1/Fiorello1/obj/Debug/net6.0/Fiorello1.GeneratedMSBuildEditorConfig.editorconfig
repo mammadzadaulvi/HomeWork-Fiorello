@@ -8,113 +8,209 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Fiorello1
 build_property.RootNamespace = Fiorello1
-build_property.ProjectDir = C:\Users\user\source\repos\Fiorello1\Fiorello1\
+build_property.ProjectDir = C:\Users\user\Desktop\HomeWork-Fiorello\Fiorello1\Fiorello1\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\user\source\repos\Fiorello1\Fiorello1
+build_property.MSBuildProjectDirectory = C:\Users\user\Desktop\HomeWork-Fiorello\Fiorello1\Fiorello1
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Areas/Admin/Views/Category/Create.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/Blog/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/Blog/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/Blog/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/Blog/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/Category/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Areas/Admin/Views/Category/Delete.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/Category/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Areas/Admin/Views/Category/Details.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/Category/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Areas/Admin/Views/Category/Index.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Areas/Admin/Views/Category/Update.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/Category/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Areas/Admin/Views/Dashboard/Index.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Areas/Admin/Views/Product/Create.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/Expert/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXhwZXJ0XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/Expert/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXhwZXJ0XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/Expert/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXhwZXJ0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/Expert/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXhwZXJ0XFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/FaqPage/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFxUGFnZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/FaqPage/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFxUGFnZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/FaqPage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFxUGFnZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/FaqPage/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFxUGFnZVxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/FlowerExpert/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmxvd2VyRXhwZXJ0XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/FlowerExpert/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmxvd2VyRXhwZXJ0XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/FlowerExpert/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmxvd2VyRXhwZXJ0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/FlowerExpert/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmxvd2VyRXhwZXJ0XFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/HomeIntroSlider/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUludHJvU2xpZGVyXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/HomeIntroSlider/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUludHJvU2xpZGVyXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/HomeIntroSlider/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUludHJvU2xpZGVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/HomeIntroSlider/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUludHJvU2xpZGVyXFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/HomeIntroSlider/UpdatePhoto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUludHJvU2xpZGVyXFVwZGF0ZVBob3RvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/Product/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Areas/Admin/Views/Product/Details.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/Product/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Areas/Admin/Views/Product/Index.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Areas/Admin/Views/Product/Update.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/Product/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Areas/Admin/Views/Product/UpdatePhoto.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/Product/UpdatePhoto.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxVcGRhdGVQaG90by5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Areas/Admin/Views/Shared/_Layout.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Areas/Admin/Views/_ViewImports.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Areas/Admin/Views/_ViewStart.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Views/Aboutus/Index.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Views/Aboutus/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXR1c1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Views/Blog/Details.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Views/Blog/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Views/Blog/Index.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Views/Blog/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Views/Fagpage/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFncGFnZVxJbmRleC5jc2h0bWw=
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Views/FaqPage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFxUGFnZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Views/Home/Index.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Views/Myaccount/Index.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Views/Myaccount/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlhY2NvdW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Views/Product/Details.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Views/Product/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Views/Product/Index.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Views/Shared/_Layout.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Views/Shared/Components/Expert/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRXhwZXJ0XERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Views/Shared/Components/FlowerExpert/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRmxvd2VyRXhwZXJ0XERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Views/_ViewImports.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Views/Shared/_ProductsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qcm9kdWN0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Fiorello1/Fiorello1/Views/_ViewStart.cshtml]
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

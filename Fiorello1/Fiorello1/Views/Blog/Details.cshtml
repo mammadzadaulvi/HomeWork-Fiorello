@@ -1,4 +1,7 @@
-﻿<a id='mkdf-back-to-top' href='#'>
+﻿@using Fiorello1.ViewModels.Blog
+@model BlogDetailsViewModel
+
+<a id='mkdf-back-to-top' href='#'>
 	<span class="mkdf-icon-stack">
 		<i class="mkdf-icon-font-awesome fa fa-angle-up "></i> <i class="mkdf-icon-font-awesome fa fa-angle-up "></i>
 	</span>
@@ -27,9 +30,9 @@
 									<div class="mkdf-post-heading">
 										<div class="mkdf-post-image">
 											<img width="1300" height="830"
-												 src="assets/vendor/wp-content/uploads/2018/05/blog-feature-img-8.jpg"
+												 src="~/assets/img/@Model.PhotoPath"
 												 class="attachment-full size-full wp-post-image" alt="aa"
-												 srcset="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/blog-feature-img-8.jpg 1300w, https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/blog-feature-img-8-300x192.jpg 300w, https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/blog-feature-img-8-768x490.jpg 768w, https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/blog-feature-img-8-1024x654.jpg 1024w, https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/blog-feature-img-8-800x511.jpg 800w, https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/blog-feature-img-8-225x144.jpg 225w, https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/blog-feature-img-8-75x48.jpg 75w"
+												 srcset="~/assets/img/@Model.PhotoPath 1300w, ~/assets/img/@Model.PhotoPath 300w, ~/assets/img/@Model.PhotoPath 768w, ~/assets/img/@Model.PhotoPath 1024w, ~/assets/img/@Model.PhotoPath 800w, ~/assets/img/@Model.PhotoPath 225w, ~/assets/img/@Model.PhotoPath 75w"
 												 sizes="(max-width: 1300px) 100vw, 1300px" loading="eager" />
 										</div>
 									</div>
@@ -37,7 +40,7 @@
 										<div class="mkdf-post-text-inner">
 											<div class="mkdf-post-text-main">
 												<h3 itemprop="name" class="entry-title mkdf-post-title">
-													Say you care
+													@Model.Title
 												</h3>
 												<section class="wpb-content-wrapper">
 													<div class="vc_row wpb_row vc_row-fluid">
@@ -47,29 +50,7 @@
 																	<div class="wpb_text_column wpb_content_element ">
 																		<div class="wpb_wrapper">
 																			<p>
-																				Class aptent taciti sociosqu
-																				ad litora torquent per
-																				conubia nostra, per inceptos
-																				himenaeos. Mauris in erat
-																				justo. Nullam ac urna eu
-																				felis dapibus condimentum
-																				sit amet a augue. Sed non
-																				neque elit. Sed ut imperdiet
-																				nisi. Proin condimentum
-																				fermentum nunc. Etiam
-																				pharetra, erat sed fermentum
-																				feugiat, velit mauris
-																				egestas quam, ut aliquam
-																				massa nisl quis neque.
-																				Suspendisse in orci enim.
-																				Sed ut perspiciatis unde
-																				omnis iste natus. Proin
-																				gravida nibh vel velit
-																				auctor aliquet. Aenean
-																				sollicitudin, lorem quis
-																				bibendum auctor, nisi elit
-																				consequat ipsum, nec
-																				sagittis sem
+																				@Html.Raw(Model.Description)
 																			</p>
 																		</div>
 																	</div>
@@ -85,11 +66,7 @@
 																		<div class="wpb_wrapper">
 																			<blockquote>
 																				<p>
-																					“Let VanderSalm’s-Flipse
-																					be your first choice for
-																					flowers. Creative
-																					solutions for all your
-																					floral needs.”
+																					
 																				</p>
 																			</blockquote>
 																		</div>
@@ -105,29 +82,7 @@
 																	<div class="wpb_text_column wpb_content_element ">
 																		<div class="wpb_wrapper">
 																			<p>
-																				Class aptent taciti sociosqu
-																				ad litora torquent per
-																				conubia nostra, per inceptos
-																				himenaeos. Mauris in erat
-																				justo. Nullam ac urna eu
-																				felis dapibus condimentum
-																				sit amet a augue. Sed non
-																				neque elit. Sed ut imperdiet
-																				nisi. Proin condimentum
-																				fermentum nunc. Etiam
-																				pharetra, erat sed fermentum
-																				feugiat, velit mauris
-																				egestas quam, ut aliquam
-																				massa nisl quis neque.
-																				Suspendisse in orci enim.
-																				Sed ut perspiciatis unde
-																				omnis iste natus. Proin
-																				gravida nibh vel velit
-																				auctor aliquet. Aenean
-																				sollicitudin, lorem quis
-																				bibendum auctor, nisi elit
-																				consequat ipsum, nec
-																				sagittis sem
+																				
 																			</p>
 																		</div>
 																	</div>
@@ -160,8 +115,7 @@
 																		<div class="wpb_wrapper">
 																			<p>
 																				<em>
-																					&#8220;Be Awesome
-																					today!&#8221;
+																					
 																				</em>
 																			</p>
 																		</div>
@@ -177,36 +131,7 @@
 																	<div class="wpb_text_column wpb_content_element ">
 																		<div class="wpb_wrapper">
 																			<p>
-																				Lorem ipsum dolor sit amet,
-																				consectetur adipiscing elit.
-																				Donec turpis dolor,
-																				malesuada non leo a,
-																				vehicula ornare nibh.
-																				Integer eget bibendum nulla,
-																				nec hendrerit magna. Nunc
-																				vitae ipsum interdum, varius
-																				magna ut, sollicitudin nunc.
-																				Pellentesque habitant morbi
-																				tristique senectus et netus
-																				et malesuada fames ac turpis
-																				egestas. Vestibulum aliquam
-																				condimentum ligula sit amet
-																				imperdiet. Sed facilisis
-																				ipsum nulla, at auctor
-																				mauris imperdiet at. Nam
-																				placerat vulputate libero at
-																				fermentum. Nullam ut lacus
-																				ac elit luctus tempor ut nec
-																				turpis. Quisque fermentum
-																				feugiat neque, ut ultrices
-																				nisi. Praesent eu euismod
-																				mauris. Lorem ipsum dolor
-																				sit amet, consectetur
-																				adipiscing elit. Duis
-																				gravida euismod efficitur.
-																				Aenean ut purus quis arcu
-																				suscipit viverra non ornare
-																				nunc. Donec bibendum at
+																				
 																			</p>
 																		</div>
 																	</div>

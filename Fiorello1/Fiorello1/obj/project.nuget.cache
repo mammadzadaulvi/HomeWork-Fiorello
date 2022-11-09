@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XygOpbGevguF0VveDkK/Uz9mvUxRgVs26fwpfbuGQhRN91b9GiaUdPwwaYKsl2+C4Llk2Td1Ff4ZaUR8JsoNbw==",
+  "dgSpecHash": "NWZuRPs+XH7+Fsi9Kj7uEdbSOewNkICpqOqMkAU7grYXgivOwV08PX0XAIDKwdjt/lZ3uUWoDYEPVMXexdbQ2w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\source\\repos\\Fiorello1\\Fiorello1\\Fiorello1.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\HomeWork-Fiorello\\Fiorello1\\Fiorello1\\Fiorello1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
