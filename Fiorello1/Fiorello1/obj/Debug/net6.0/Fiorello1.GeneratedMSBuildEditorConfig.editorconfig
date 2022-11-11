@@ -179,8 +179,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Views/Myaccount/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlhY2NvdW50XEluZGV4LmNzaHRtbA==
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Views/MyAccount/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlBY2NvdW50XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Views/MyAccount/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlBY2NvdW50XExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Views/MyAccount/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlBY2NvdW50XFJlZ2lzdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/user/Desktop/HomeWork-Fiorello/Fiorello1/Fiorello1/Views/Product/Details.cshtml]
