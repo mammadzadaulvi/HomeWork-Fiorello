@@ -1,6 +1,10 @@
 ﻿@using Fiorello1.ViewModels.MyAccount
 @model AccountLoginViewModel
 
+@{
+    var returnUrl = Context.Request.Query["returnUrl"];
+}
+
 <div class="mkdf-content-inner">
     <div class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-title-content-va-middle" style="height: 225px;background-color: #fafaf9" data-height="225">
         <div class="mkdf-title-wrapper" style="height: 225px">
@@ -19,8 +23,9 @@
                     <div class="woocommerce">
                         <div class="woocommerce-notices-wrapper"></div>
                         <h2>Login</h2>
-                        <form class="woocommerce-form woocommerce-form-login login" method="post" asp-action="login" asp-controller="account">
+                        <form class="woocommerce-form woocommerce-form-login login" method="post" asp-action="login" asp-controller="myaccount">
                             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            
                             <div class="form-group">
                                 <label asp-for="Username"></label>
                                 <input asp-for="Username" />
@@ -33,10 +38,10 @@
                             </div>
 
                             <div class="form-group">
-                                <button class="btn btn-primary" type="submit">LogIn</button>
+                                <button class="btn btn-primary" type="submit">Login</button>
                             </div>
                             <div>
-                                Don't you have still an account? <a asp-action="register" asp-controller="account">Register</a>
+                                Don't you have still an account? <a asp-action="register" asp-controller="myaccount">Register</a>
                             </div>
                         </form>
                     </div>

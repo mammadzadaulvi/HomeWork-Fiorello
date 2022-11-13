@@ -9,5 +9,6 @@ namespace Fiorello1.ViewModels.MyAccount
 
         [Required, MaxLength(100), DataType(DataType.Password)]
         public string Password { get; set; }
+        public string? ReturnUrl { get; set; }
     }
 }

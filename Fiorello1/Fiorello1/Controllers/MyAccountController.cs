@@ -1,4 +1,5 @@
-﻿using Fiorello1.Models;
+﻿using Fiorello1.Attributes;
+using Fiorello1.Models;
 using Fiorello1.ViewModels.MyAccount;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -48,6 +49,7 @@ namespace Fiorello1.Controllers
         }
 
         [HttpGet]
+        [OnlyAnonymous]
         public async Task<IActionResult> Login()
         {
             return View();
@@ -71,7 +73,15 @@ namespace Fiorello1.Controllers
                 ModelState.AddModelError(string.Empty, "Username or Password is incorrect");
                 return View(model);
             }
-            return RedirectToAction("index", "home");
+            
+            if (!string.IsNullOrEmpty(model.ReturnUrl) && Url.IsLocalUrl(model.ReturnUrl))
+            {
+                return Redirect(model.ReturnUrl);
+            }
+            else
+            {
+                return RedirectToAction("index", "home");
+            }
         }
 
 
