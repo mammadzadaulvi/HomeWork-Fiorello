@@ -1,6 +1,10 @@
 ﻿@using Fiorello1.ViewModels.Blog
 @model BlogIndexViewModel
 
+@Model.Page
+@Model.PageCount
+@Model.Take
+
 <a id='mkdf-back-to-top' href='#'>
     <span class="mkdf-icon-stack">
         <i class="mkdf-icon-font-awesome fa fa-angle-up "></i> <i class="mkdf-icon-font-awesome fa fa-angle-up "></i>
@@ -80,23 +84,41 @@
                             </div>
                             <div class="mkdf-blog-pagination">
                                 <ul>
-                                    <li class="mkdf-pag-number">
-                                        <a class="mkdf-pag-active" href="#">1</a>
-                                    </li>
-                                    <li class="mkdf-pag-number">
-                                        <a itemprop="url" class="mkdf-pag-inactive"
-                                           href="page/2/index.html">2</a>
-                                    </li>
-                                    <li class="mkdf-pag-number">
-                                        <a itemprop="url" class="mkdf-pag-inactive"
-                                           href="page/3/index.html">3</a>
-                                    </li>
-                                    <li class="mkdf-pag-next">
-                                        <a itemprop="url" href="page/2/index.html">
-                                            <span class="mkdf-icon-linear-icons lnr lnr-chevron-right"></span>
-                                        </a>
-                                    </li>
+                                    @if (Model.Page > 1)
+                                    {
+                                        <li class="mkdf-pag-prev">
+                                            @{
+                                                var prevPage = @Model.Page - 1;
+
+                                                <a itemprop="url" asp-action="index" asp-controller="blog" asp-route-page="@prevPage">
+                                                    <span class="mkdf-icon-linear-icons lnr lnr-chevron-left"></span>
+                                                </a>
+                                            }
+                                        </li>
+                                    }
+
+                                    @for (int i = 1; i <= Model.PageCount; i++)
+                                    {
+                                        <li class="mkdf-pag-number">
+                                            <a asp-action="index" asp-controller="blog" asp-route-page="@i" class="@(Model.Page==i ? "mkdf-pag-active disabled" : "mkdf-pag-inactive")">@i</a>
+                                        </li>
+                                    }
+
+                                    @if (Model.PageCount != Model.Page)
+                                    {
+                                        <li class="mkdf-pag-next">
+                                            @{
+                                                var nextPage = @Model.Page + 1;
+
+                                                <a itemprop="url" asp-action="index" asp-controller="blog" asp-route-page="@nextPage">
+                                                    <span class="mkdf-icon-linear-icons lnr lnr-chevron-right"></span>
+                                                </a>
+                                            }
+                                        </li>
+                                    }
+
                                 </ul>
+
                             </div>
                             <div class="mkdf-blog-pagination-wp">
                             </div>

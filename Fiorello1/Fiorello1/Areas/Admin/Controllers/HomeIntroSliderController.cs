@@ -3,12 +3,15 @@ using Fiorello1.Areas.Admin.ViewModels.HomeIntroSlider.HomeIntroSliderPhoto;
 using Fiorello1.DAL;
 using Fiorello1.Helpers;
 using Fiorello1.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace Fiorello1.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class HomeIntroSliderController : Controller
     {
         private readonly AppDbContext _appDbContext;
@@ -222,7 +225,6 @@ namespace Fiorello1.Areas.Admin.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var homeIntroSlider = await _appDbContext.HomeIntroSliders.Include(hs => hs.HomeIntroSliderPhotos).FirstOrDefaultAsync(his => his.Id == id);
-
             if (homeIntroSlider == null) return NotFound();
 
             _fileService.Delete(homeIntroSlider.AddPhotoName, _webHostEnvironment.WebRootPath);
@@ -232,6 +234,7 @@ namespace Fiorello1.Areas.Admin.Controllers
                 _fileService.Delete(photo.Name, _webHostEnvironment.WebRootPath);
 
             }
+
             _appDbContext.HomeIntroSliders.Remove(homeIntroSlider);
             await _appDbContext.SaveChangesAsync();
             return RedirectToAction("Index");
@@ -267,7 +270,6 @@ namespace Fiorello1.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> UpdatePhoto(int id)
         {
-
             var homeIntroSliderPhoto = await _appDbContext.HomeIntroSliderPhotos.FindAsync(id);
             if (homeIntroSliderPhoto == null) return NotFound();
 

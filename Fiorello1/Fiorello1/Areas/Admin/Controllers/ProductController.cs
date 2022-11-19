@@ -3,13 +3,17 @@ using Fiorello1.Areas.Admin.ViewModels.Product.ProductPhoto;
 using Fiorello1.DAL;
 using Fiorello1.Helpers;
 using Fiorello1.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
+using static Fiorello1.Models.Product;
 
 namespace Fiorello1.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class ProductController : Controller
     {
         private readonly AppDbContext _appDbContext;
@@ -22,11 +26,72 @@ namespace Fiorello1.Areas.Admin.Controllers
             _fileService = fileService;
             _webHostEnvironment = webHostEnvironment;
         }
-        public async Task<IActionResult> Index()
+
+        #region Filter
+
+        private IQueryable<Product> FilterProducts(ProductIndexViewModel model)
         {
-            var model = new ProductIndexViewModel
+            var products = FilterByTitle(model.Title);
+            products = FilterByCategory(products, model.CategoryId);
+
+            products = FilterByPrice(products, model.MinPrice, model.MaxPrice);
+
+            products = FilterByQuantity(products, model.MinQuantity, model.MaxQuantity);
+
+            products = FilterByCreatedAt(products, model.DateCreatedStart, model.DateCreatedEnd);
+
+            products = FilterByStatus(products, model.Status);
+
+            return products;
+        }
+
+        private IQueryable<Product> FilterByTitle(string title)
+        {
+            return _appDbContext.Products.Where(p => !string.IsNullOrEmpty(title) ? p.Title.Contains(title) : true);
+        }
+
+        private IQueryable<Product> FilterByCategory(IQueryable<Product> products, int? categoryId)
+        {
+            return products.Where(p => categoryId != null ? p.CategoryId == categoryId : true);
+        }
+
+        private IQueryable<Product> FilterByPrice(IQueryable<Product> products, double? minPrice, double? maxPrice)
+        {
+            return products.Where(p => (minPrice != null ? p.Price >= minPrice : true) && (maxPrice != null ? p.Price <= maxPrice : true));
+        }
+
+        private IQueryable<Product> FilterByQuantity(IQueryable<Product> products, int? minQuantity, int? maxQuantity)
+        {
+            return products.Where(p => (minQuantity != null ? p.Quantity >= minQuantity : true) && (maxQuantity != null ? p.Quantity <= maxQuantity : true));
+        }
+
+        private IQueryable<Product> FilterByCreatedAt(IQueryable<Product> products, DateTime? createdAtstart, DateTime? createdEndstart)
+        {
+            return products.Where(p => (createdAtstart != null ? p.CreateAt>= createdAtstart : true) && (createdEndstart != null ? p.CreateAt <= createdEndstart : true));
+        }
+
+        private IQueryable<Product> FilterByStatus(IQueryable<Product> products, ProductStatus? status)
+        {
+            return products.Where(p => status != null ? p.Status == status : true);
+        }
+
+        #endregion
+
+
+        public async Task<IActionResult> Index(ProductIndexViewModel model)
+        {
+            var products = FilterProducts(model);
+
+            model = new ProductIndexViewModel
             {
-                Products = await _appDbContext.Products.ToListAsync()
+                Products = await products.Include(p => p.Category).ToListAsync(),
+                Categories = await _appDbContext.Categories.Select(c => new SelectListItem
+                {
+                    Text = c.Title,
+                    Value = c.Id.ToString()
+                })
+               .ToListAsync()
+
             };
             return View(model);
         }
@@ -137,60 +202,6 @@ namespace Fiorello1.Areas.Admin.Controllers
         }
         #endregion
 
-        #region Delete
-
-        [HttpGet]
-        public async Task<IActionResult> Delete(int id)
-        {
-            var product = await _appDbContext.Products.Include(p => p.ProductPhotos).FirstOrDefaultAsync(p => p.Id == id);
-            if (product == null) return NotFound();
-
-            _fileService.Delete(product.MainPhotoName, _webHostEnvironment.WebRootPath);
-
-            foreach (var photo in product.ProductPhotos)
-            {
-                _fileService.Delete(photo.Name, _webHostEnvironment.WebRootPath);
-
-            }
-            _appDbContext.Products.Remove(product);
-            await _appDbContext.SaveChangesAsync();
-            return RedirectToAction("Index");
-        }
-
-        #endregion
-
-        #region Details
-        [HttpGet]
-
-        public async Task<IActionResult> Details(int id)
-        {
-            var product = await _appDbContext.Products.Include(p => p.ProductPhotos).FirstOrDefaultAsync(p => p.Id == id);
-            if (product == null) return NotFound();
-
-            var model = new ProductDetailsViewModel
-            {
-                Id = product.Id,
-                Title = product.Title,
-                Price = product.Price,
-                Quantity = product.Quantity,
-                CategoryId = product.CategoryId,
-                Description = product.Description,
-                Weight = product.Weight,
-                Dimension = product.Dimension,
-                Status = product.Status,
-                MainPhoto = product.MainPhotoName,
-                AddPhotos = product.ProductPhotos,
-                Categories = await _appDbContext.Categories.Select(c => new SelectListItem
-                {
-                    Text = c.Title,
-                    Value = c.Id.ToString()
-                }).ToListAsync()
-            };
-            return View(model);
-        }
-
-        #endregion
-
         #region Update
         [HttpGet]
         public async Task<IActionResult> Update(int id)
@@ -211,7 +222,8 @@ namespace Fiorello1.Areas.Admin.Controllers
                 MainPhotoName = product.MainPhotoName,
                 ProductPhotos = product.ProductPhotos,
 
-                Categories = await _appDbContext.Categories.Select(c => new SelectListItem {
+                Categories = await _appDbContext.Categories.Select(c => new SelectListItem
+                {
                     Text = c.Title,
                     Value = c.Id.ToString()
                 }).ToListAsync()
@@ -228,14 +240,14 @@ namespace Fiorello1.Areas.Admin.Controllers
                 Value = c.Id.ToString()
             }).ToListAsync();
 
-            if(id != model.Id) return View(model);  
-            if(id != model.Id) return BadRequest();
+            if (id != model.Id) return View(model);
+            if (id != model.Id) return BadRequest();
 
             var product = await _appDbContext.Products.Include(p => p.ProductPhotos).FirstOrDefaultAsync(p => p.Id == id);
 
             model.ProductPhotos = product.ProductPhotos.ToList();
 
-            if(product == null) return NotFound();  
+            if (product == null) return NotFound();
             bool isExist = await _appDbContext.Products.AnyAsync(p => p.Title.ToLower().Trim() == product.Title.ToLower().Trim() && p.Id != product.Id);
 
             if (isExist)
@@ -244,15 +256,6 @@ namespace Fiorello1.Areas.Admin.Controllers
                 return View(model);
             }
 
-            product.Title = model.Title;
-            product.Price = model.Price;
-            product.Description = model.Description;
-            product.Quantity = model.Quantity;
-            product.Weight = model.Weight;
-            product.Dimension = model.Dimension;
-            product.Status = model.Status;
-
-            model.MainPhotoName = product.MainPhotoName;
 
             if (model.MainPhoto != null)
             {
@@ -317,11 +320,77 @@ namespace Fiorello1.Areas.Admin.Controllers
             }
 
 
+
+            product.Title = model.Title;
+            product.Price = model.Price;
+            product.Description = model.Description;
+            product.Quantity = model.Quantity;
+            product.Weight = model.Weight;
+            product.Dimension = model.Dimension;
+            product.Status = model.Status;
+            product.MainPhotoName = model.MainPhotoName;
+
             return RedirectToAction("Index");
 
         }
 
         #endregion
+
+        #region Delete
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var product = await _appDbContext.Products.Include(p => p.ProductPhotos).FirstOrDefaultAsync(p => p.Id == id);
+            if (product == null) return NotFound();
+
+            _fileService.Delete(product.MainPhotoName, _webHostEnvironment.WebRootPath);
+
+            foreach (var photo in product.ProductPhotos)
+            {
+                _fileService.Delete(photo.Name, _webHostEnvironment.WebRootPath);
+
+            }
+            _appDbContext.Products.Remove(product);
+            await _appDbContext.SaveChangesAsync();
+            return RedirectToAction("Index");
+        }
+
+        #endregion
+
+        #region Details
+        [HttpGet]
+
+        public async Task<IActionResult> Details(int id)
+        {
+            var product = await _appDbContext.Products.Include(p => p.ProductPhotos).FirstOrDefaultAsync(p => p.Id == id);
+            if (product == null) return NotFound();
+
+            var model = new ProductDetailsViewModel
+            {
+                Id = product.Id,
+                Title = product.Title,
+                Price = product.Price,
+                Quantity = product.Quantity,
+                CategoryId = product.CategoryId,
+                Description = product.Description,
+                Weight = product.Weight,
+                Dimension = product.Dimension,
+                Status = product.Status,
+                MainPhoto = product.MainPhotoName,
+                AddPhotos = product.ProductPhotos,
+                Categories = await _appDbContext.Categories.Select(c => new SelectListItem
+                {
+                    Text = c.Title,
+                    Value = c.Id.ToString()
+                }).ToListAsync()
+            };
+            return View(model);
+        }
+
+        #endregion
+
+        
 
 
         #region UpdatePhoto

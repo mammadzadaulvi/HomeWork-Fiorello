@@ -43,6 +43,7 @@ app.MapControllerRoute(
             name: "default",
             pattern: "{controller=home}/{action=index}/{id?}"
     );
+
 app.UseStaticFiles();
 app.UseAuthentication();
 app.UseAuthorization();

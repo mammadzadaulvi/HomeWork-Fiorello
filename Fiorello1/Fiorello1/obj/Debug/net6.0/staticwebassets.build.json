@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XUUdKB2leCyWX9kKsaqtEl84zKeJe+3pXO9ZXcXC6Vw=",
+  "Hash": "K2a7yrxQx1nPkSoycChuaNjRgD116Z5H06kCsFKGgCk=",
   "Source": "Fiorello1",
   "BasePath": "_content/Fiorello1",
   "Mode": "Default",
@@ -1987,6 +1987,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\f66c563b-3851-4d5d-a96d-b078f25d1c73_p4.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\HomeWork-Fiorello\\Fiorello1\\Fiorello1\\wwwroot\\assets\\js\\custom.js",
+      "SourceId": "Fiorello1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\HomeWork-Fiorello\\Fiorello1\\Fiorello1\\wwwroot\\",
+      "BasePath": "_content/Fiorello1",
+      "RelativePath": "assets/js/custom.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\custom.js"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\HomeWork-Fiorello\\Fiorello1\\Fiorello1\\wwwroot\\assets\\js\\product-details.js",

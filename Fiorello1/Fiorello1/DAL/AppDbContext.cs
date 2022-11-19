@@ -23,5 +23,8 @@ namespace Fiorello1.DAL
         public DbSet<HomeIntroSliderPhoto> HomeIntroSliderPhotos { get; set; }
 
         public DbSet<Blog> Blogs { get; set; }
+
+        public DbSet<Basket> Baskets { get; set; }
+        public DbSet<BasketProduct> BasketProducts { get; set; }
     }
 }

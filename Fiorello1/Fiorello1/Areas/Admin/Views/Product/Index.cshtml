@@ -1,4 +1,5 @@
 ﻿@using Fiorello1.Areas.Admin.ViewModels.Product
+@using static Fiorello1.Models.Product
 @model ProductIndexViewModel
 
 <div class="main-panel">
@@ -8,13 +9,84 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Product</h4>
-                        <a class="btn btn-primary" asp-action="create" asp-controller="product" asp-area="admin">CREATE PRODUCT</a>
+                        <h4>Filter Section</h4>
+                        <div class="filter-section">
+                            <form method="get" asp-action="index" asp-controller="product">
+                                <div class="row">
+                                    <div class="col-6">
+
+                                        <div class="form-group">
+                                            <label asp-for="Title"></label>
+                                            <input asp-for="Title" class="form-control" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label asp-for="CategoryId"></label>
+                                            <select asp-for="CategoryId" asp-items="Model.Categories">
+                                                <option value="">Choose one option</option>
+                                            </select>
+                                        </div>
+
+                                        <div style="width:200px" class="form-group">
+                                            <label asp-for="MinPrice"></label>
+                                            <input asp-for="MinPrice" class="form-control" />
+                                        </div>
+
+                                        <div style="width:200px" class="form-group">
+                                            <label asp-for="MaxPrice"></label>
+                                            <input asp-for="MaxPrice" class="form-control" />
+                                        </div>
+
+                                        <div style="width:200px" class="form-group">
+                                            <label asp-for="MinQuantity"></label>
+                                            <input asp-for="MinQuantity" class="form-control" />
+                                        </div>
+
+                                        <div style="width:200px" class="form-group">
+                                            <label asp-for="MaxQuantity"></label>
+                                            <input asp-for="MaxQuantity" class="form-control" />
+                                        </div>
+
+                                        <div style="width:200px" class="form-group">
+                                            <label asp-for="DateCreatedStart"></label>
+                                            <input type="date" asp-for="DateCreatedStart" class="form-control" />
+                                        </div>
+
+                                        <div style="width:200px" class="form-group">
+                                            <label asp-for="DateCreatedEnd"></label>
+                                            <input type="date" asp-for="DateCreatedEnd" class="form-control" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label asp-for="Status"></label>
+                                            <select asp-for="Status" asp-items="Html.GetEnumSelectList<ProductStatus>()">
+                                                <option value="">Choose one option</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-info">
+                                                Search
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                       
+                        <a class="btn btn-primary" asp-action="create" asp-controller="product" asp-area="admin">Create Product</a>
+                        
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
                                     <tr>
                                         <th>Id</th>
                                         <th>Title</th>
+                                        <th>Price</th>
+                                        <th>Category</th>
+                                        <th>Status</th>
+                                        <th>Quantity</th>
+                                        <th>Created Time</th>
                                         <th>Photo</th>
                                         <th>Actions</th>
                                     </tr>
@@ -25,7 +97,12 @@
                                         <tr>
                                             <td>@product.Id</td>
                                             <td>@product.Title</td>
-                                            <td><img src="~/assets/img/@product.MainPhotoName" /></td>
+                                            <td>@product.Price</td>
+                                            <td>@product.Category.Title</td>
+                                            <td>@product.Status</td>
+                                            <td>@product.Quantity</td>
+                                            <td>@product.CreateAt.ToShortDateString()</td>
+                                            <td><img src="~/assets/img/@product.MainPhotoName"/></td>
                                             <td>
                                                 <a class="btn btn-primary" asp-action="update" asp-controller="product" asp-area="admin" asp-route-id="@product.Id">Update</a>
                                                 <a class="btn btn-danger" onclick="confirm('Eminsinizmi?')" asp-action="delete" asp-controller="product" asp-area="admin" asp-route-id="@product.Id">Delete</a>

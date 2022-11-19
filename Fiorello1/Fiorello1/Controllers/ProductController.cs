@@ -29,12 +29,6 @@ namespace Fiorello1.Controllers
 
         public async Task<IActionResult> LoadMore(int skipRow)
         {
-            //var products = await _appDbContext.Products
-            //                  .OrderByDescending(p => p.Id)
-            //                  .Skip(4 * skipRow)
-            //                  .Take(4)
-            //                  .ToListAsync();
-
             bool isLast = false;
             var product = await _appDbContext.Products
                                .OrderByDescending(p => p.Id)

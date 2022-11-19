@@ -31,20 +31,20 @@ namespace Fiorello1.Areas.Admin.Controllers
 
             if (user == null)
             {
-                ModelState.AddModelError(string.Empty, "Username or Password is wrong!");
+                ModelState.AddModelError(string.Empty, "Username or Password is wrong");
                 return View(model);
             }
 
             if (!await _userManager.IsInRoleAsync(user, UserRoles.Admin.ToString()))
             {
-                ModelState.AddModelError(string.Empty, "Username or Password is wrong!");
+                ModelState.AddModelError(string.Empty, "Username or Password is wrong");
                 return View(model);
             }
 
             var result = await _signInManager.PasswordSignInAsync(user, model.Password, false, false);
             if (!result.Succeeded)
             {
-                ModelState.AddModelError(string.Empty, "Username or Password is wrong!");
+                ModelState.AddModelError(string.Empty, "Username or Password is wrong");
                 return View(model);
             }
             return RedirectToAction("index", "dashboard");

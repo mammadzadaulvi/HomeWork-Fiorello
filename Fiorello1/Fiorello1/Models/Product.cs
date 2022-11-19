@@ -13,8 +13,10 @@
         public string Weight { get; set; }  
         public string Dimension { get; set; }   
         public ProductStatus Status { get; set; }
+        public DateTime CreateAt { get; set; }
 
         public ICollection<ProductPhoto> ProductPhotos { get; set; }
+        public List<BasketProduct> BasketProducts { get; set; }
 
         public enum ProductStatus
         {

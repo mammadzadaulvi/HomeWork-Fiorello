@@ -2,12 +2,15 @@
 using Fiorello1.DAL;
 using Fiorello1.Helpers;
 using Fiorello1.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace Fiorello1.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class CategoryController : Controller
     {
         private readonly AppDbContext _appDbContext;
@@ -62,6 +65,7 @@ namespace Fiorello1.Areas.Admin.Controllers
 
         #region Update
 
+        [HttpGet]
         public async Task<IActionResult> Update(int id)
         {
             var category = await _appDbContext.Categories.FindAsync(id);

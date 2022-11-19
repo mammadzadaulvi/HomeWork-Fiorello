@@ -1,12 +1,15 @@
 ﻿using Fiorello1.Areas.Admin.ViewModels.FaqPage;
 using Fiorello1.DAL;
 using Fiorello1.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace Fiorello1.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class FaqPageController : Controller
     {
         private readonly AppDbContext _appDbContext;
@@ -24,7 +27,6 @@ namespace Fiorello1.Areas.Admin.Controllers
             return View(model);
 
         }
-
 
 
 
@@ -115,6 +117,10 @@ namespace Fiorello1.Areas.Admin.Controllers
             await _appDbContext.SaveChangesAsync();
             return RedirectToAction("Index");
         }
+
+
+
+
 
         [HttpGet]
 

@@ -10,7 +10,6 @@ namespace Fiorello1.Attributes
             if (context.HttpContext.User.Identity.IsAuthenticated)
             {
                 context.Result = new NotFoundResult();
-
             }
         }
     }

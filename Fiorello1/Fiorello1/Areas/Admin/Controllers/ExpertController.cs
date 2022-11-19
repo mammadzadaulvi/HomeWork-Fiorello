@@ -2,12 +2,15 @@
 using Fiorello1.DAL;
 using Fiorello1.Helpers;
 using Fiorello1.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace Fiorello1.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class ExpertController : Controller
     {
         private readonly AppDbContext _appDbContext;
@@ -41,10 +44,7 @@ namespace Fiorello1.Areas.Admin.Controllers
 
         public async Task<IActionResult> Create(ExpertCreateViewModel model)
         {
-
-
             if (!ModelState.IsValid) return View(model);
-
 
             if (!_fileService.IsImage(model.Photo))
             {
@@ -133,7 +133,6 @@ namespace Fiorello1.Areas.Admin.Controllers
 
             if (expert == null) return NotFound();
 
-
             if (model.Photo != null)
             {
 
@@ -156,11 +155,8 @@ namespace Fiorello1.Areas.Admin.Controllers
             expert.Position = model.Position;
             model.PhotoPath = expert.PhotoPath;
 
-
-
             await _appDbContext.SaveChangesAsync();
             return RedirectToAction("Index");
         }
-
     }
 }
