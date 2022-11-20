@@ -150,16 +150,18 @@
 																		</a>
 																	</h6>
 																	<div class="mkdf-pli-add-to-cart mkdf-default-skin">
-																		<a rel="nofollow"
-																		   href="https://www.amazon.com/ProFlowers-Count-Ginger-Flowers-Mothers/dp/B01IDQKGYC/ref=sr_1_1_sspa?ie=UTF8&amp;qid=1524830057&amp;sr=8-1-spons&amp;keywords=roses&amp;psc=1"
-																		   data-quantity="1"
-																		   data-product_id="309"
-																		   data-product_sku="89564"
-																		   class="button product_type_external mkdf-button">
-																			Buy
-																			on Amazon
-																		</a>
-																	</div>
+                                                                        <button id="addToCart" data-id="@product.Id" rel="nofollow"
+                                                                                href="indexcd19.html?add-to-cart=365"
+                                                                                data-quantity="1"
+                                                                                data-product_id="365"
+                                                                                data-product_sku="7555"
+                                                                                class="button add_to_cart_button ajax_add_to_cart mkdf-button">
+
+                                                                                     Add to cart
+
+                                                                         </button>
+                                                                      </div>
+																	
 																	<div class="mkdf-pli-price">
 																		<span class="woocommerce-Price-amount amount">
 																				<span class="woocommerce-Price-currencySymbol">&#036;</span>@product.Price
@@ -671,3 +673,7 @@
 		</div>
 	</div>
 </div>
+
+@section Scripts{
+    <script src="~/assets/js/custom.js"></script>
+}

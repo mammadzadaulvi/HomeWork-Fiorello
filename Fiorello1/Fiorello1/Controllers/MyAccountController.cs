@@ -17,6 +17,8 @@ namespace Fiorello1.Controllers
             _userManager = userManager;
             _signInManager = signInManager;
         }
+
+
         public IActionResult Register()
         {
             return View();
@@ -49,7 +51,7 @@ namespace Fiorello1.Controllers
         }
 
         [HttpGet]
-        [OnlyAnonymous]
+        //[OnlyAnonymous]
         public async Task<IActionResult> Login()
         {
             return View();

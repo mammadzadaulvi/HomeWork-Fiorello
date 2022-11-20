@@ -19,7 +19,7 @@
                     <div class="woocommerce">
                         <div class="woocommerce-notices-wrapper"></div>
                         <h2>Register</h2>
-                        <form class="woocommerce-form woocommerce-form-login login" method="post" asp-action="register" asp-controller="account">
+                        <form class="woocommerce-form woocommerce-form-login login" method="post" asp-action="register" asp-controller="myaccount">
                             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                             <div class="form-group">
                                 <label asp-for="Fullname"></label>
@@ -51,7 +51,7 @@
                                 <button class="btn btn-primary" type="submit">Sign up</button>
                             </div>
                             <div>
-                                Already have an account? <a asp-action="login" asp-controller="account">Login</a>
+                                Already have an account? <a asp-action="login" asp-controller="myaccount">Login</a>
                             </div>
                         </form>
                     </div>
